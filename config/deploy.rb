@@ -1,3 +1,7 @@
+# load 'deploy' if respond_to?(:namespace) # cap2 differentiator
+require 'bundler/capistrano' # packeterar gemsen i vendor/ (bundle install --deployment)
+require "rvm/capistrano"
+require "favicon_maker"
 
 set :stages, %w(production staging)
 set :default_stage, "staging"
@@ -10,7 +14,6 @@ set :ssh_options, { :forward_agent => true }
 set :deploy_via, :remote_cache
 set :copy_compression, :gzip
 set :scm, :git
-set :copy_compression, :gzip
 set :user, 'deploy'
 set :use_sudo, false
 
@@ -18,3 +21,11 @@ before 'deploy:update_code' do
   # run_locally 'rm -rf build/*' # måste behålla index.php
   run_locally 'middleman build'
 end
+
+
+
+before "deploy:assets:precompile", "deploy:symlink_config_files" # must be here so it's done before precompile assets want's to do 'rake'
+after "deploy", "deploy:symlink_blog"
+after "deploy", "deploy:restart"
+after "deploy", "deploy:migrate"
+after "deploy", "deploy:cleanup"
