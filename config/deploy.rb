@@ -1,7 +1,4 @@
-# load 'deploy' if respond_to?(:namespace) # cap2 differentiator
-require 'bundler/capistrano' # packeterar gemsen i vendor/ (bundle install --deployment)
-require "rvm/capistrano"
-require "favicon_maker"
+
 
 set :stages, %w(production staging)
 set :default_stage, "staging"
