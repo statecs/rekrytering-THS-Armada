@@ -6,7 +6,7 @@ require 'capistrano/ext/multistage' # yes, must be after variables above
 
 set :application, "rekrytering.armada.nu"
 set :deploy_to, "/var/www/rekrytering.armada.nu"
-set :repository, "git@github.com:armada-ths/rekrytering.git"
+set :repository, "build"
 set :ssh_options, { :forward_agent => true }
 set :deploy_via, :copy
 set :copy_compression, :gzip
