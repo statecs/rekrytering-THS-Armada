@@ -10,7 +10,7 @@ set :repository, "git@github.com:armada-ths/rekrytering.git"
 set :ssh_options, { :forward_agent => true }
 set :deploy_via, :copy
 set :copy_compression, :gzip
-set :scm, :git
+set :scm, :none
 set :user, 'deploy'
 set :use_sudo, false
 
@@ -23,5 +23,4 @@ end
 
 before "deploy:assets:precompile", "deploy:symlink_config_files" # must be here so it's done before precompile assets want's to do 'rake'
 after "deploy", "deploy:restart"
-after "deploy", "deploy:migrate"
 after "deploy", "deploy:cleanup"
