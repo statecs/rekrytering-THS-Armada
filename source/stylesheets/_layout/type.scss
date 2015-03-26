@@ -1,0 +1,90 @@
+$color-dirtwhite:#fff;
+$color-red: #ce271e;
+
+$font-jefferson:'ltc_jefferson_gothicregular';
+$font-didot:'Didot LT Std';
+$font-calluna:'Calluna';
+$font-calluna-sans:'Calluna Sans';
+
+body {
+	text-rendering: optimizelegibility;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1 {
+	font-family: $font-jefferson;
+	text-transform:uppercase;
+	color:$color-red;
+	text-align: center;
+
+	@include at-breakpoint(0 $break-phone) {
+		span:first-child {
+			display:block;
+		}
+	}
+
+	@include at-breakpoint($break-phone $total-columns) {
+		span:last-child {
+			display:block;
+		}
+	}
+}
+
+h2 {
+	font-family:$font-didot;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+h3 {
+	font-family: $font-jefferson;
+	text-transform:uppercase;
+	text-align:center;
+}
+
+h4 {
+	font-family:$font-didot;
+	text-transform:uppercase;
+}
+
+.row {
+	h4 { text-align:center;}
+}
+
+.nav {
+	ul {
+
+		li {
+			text-transform:uppercase;
+		}
+	}
+
+	h4 {
+		text-align:right;
+		margin: 8px 0;
+	}
+}
+
+p, ul li {
+	font-family:$font-calluna-sans;
+	font-weight: 300;
+}
+
+a {
+	text-decoration: none;
+	color:black;
+	&:hover {
+		color:black;
+		border-bottom: 1px solid #000;
+	}
+}
+
+#apply-link {
+	font-family: $font-jefferson;	
+}
+
+.nav-bar-phone {
+	font-family:$font-jefferson;
+	text-align:center;
+	text-transform:uppercase;
+}

@@ -1,0 +1,90 @@
+/!!!5
+/[if lt IE 7] <html class="no-js lt-ie9 lt-ie8 lt-ie7">
+/[if IE 7] <html class="no-js lt-ie9 lt-ie8">
+/[if IE 8] <html class="no-js lt-ie9">
+%html.no-js
+	%head
+		%meta{:charset => "utf-8"}
+		%meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+		
+		-# To set titles and descriptions globally and for each individual page, see /DOCS.md
+		%title= page_title
+		%meta{:content => "Är du Armadas nästa talang? Sök till gruppledare, utvecklare eller formgivare senast den 11:e april!", :name => "description"}	
+		%meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0", :name => "viewport"}
+		%meta{:content => "Ansökan till Armada har öppnat! | Armada.nu", :property => "og:title"}/
+		%meta{:content => 'images/logo.png', :property => "og:image"}/
+		%meta{:content => "Är du Armadas nästa talang? Sök till Armada senast den 11:e april!", :property => "og:description"}/
+
+		-#Favicon Options:
+		-#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
+		-#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
+		
+		
+		= stylesheet_link_tag "site"
+		= javascript_include_tag "vendor/modernizr-2.6.1.min"
+	%body
+		/[if lt IE 7] <p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+		%header
+		.nav-bar-phone
+			.nav-collapse-btn-phone.icon-menu
+			.nav-bar-phone-inner
+				= page_title
+		.nav
+			.nav-collapse-btn.icon-arrow-right
+			.nav-wrapper
+				.nav-inner
+					%h4= link_to 'Ansök till Armada!', '#ansok'
+					%h4= link_to 'Vad är Armada', '#om'
+					%h4= link_to 'Vad innebär det att vara en del av Armada', '#armda'
+					%h4= link_to 'Marknadsföring & Kommunikation', '#marknadsforing-kommunikation'
+					%ul
+						%li= link_to 'IT-utvecklare (1 st)', '#it'
+						%li= link_to 'Apputvecklare (2+2 st)', '#app-utv'
+						%li= link_to 'Kampanjgruppledare (2 st)', '#kampanj'
+						%li= link_to 'Fotogruppledare (1 st)', '#foto'
+						%li= link_to 'Filmskapare Kampanj (1 st)', '#filmskapare-Kampanj'
+						%li= link_to 'Grafisk formgivare (2 st)', '#grafisk-formgivare'
+
+					%h4= link_to 'Näringsliv & Event', '#naringsliv-event'
+					%ul
+						%li= link_to 'Eventgruppledare (4 st)', '#event'
+						%li= link_to 'Sponskoordinator (1 st)', '#spons'
+						%li= link_to 'Loungegruppledare (2 st)', '#lounge'
+						%li= link_to 'Servicegruppledare (2 st)', '#service'
+						%li= link_to 'Logistikgruppledare Bankett (1 st)', '#log-bankett' 
+						%li= link_to 'Teknikgruppledare Bankett (1 st)', '#teknik-bankett'
+						%li= link_to 'Underhållningsgruppledare Bankett (1 st)', '#underhallning'
+						%li= link_to 'Filmgruppledare Bankett (1 st)', '#filmgl-Bankett'
+						%li= link_to 'Sälj- & inköpsgruppledare Bankett (1 st)', '#salj'
+
+					%h4= link_to 'Logistik & System', '#logistik-system'
+					%ul
+						%li= link_to 'Systemutvecklare (2-4 st)', '#system'
+						%li= link_to 'Mässgruppledare (15 st)', '#mass-gl'
+						%li= link_to 'Specialstyrkan: Logistik-gruppledare (1 st)', '#spec-log'
+						%li= link_to 'Specialstyrkan: Teknik-gruppledare (1 st)', '#spec-tek'
+						%li= link_to 'Representations-gruppledare (1 st)', '#rep-gl'
+						%li= link_to 'Representationssittnings-gruppledare (1 st)', '#representationssittning'
+		.nav-bg
+
+
+		%div{:role => "main", :class => "main"}= yield
+		%footer
+		
+		= javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
+		:javascript
+			window.jQuery || document.write('<script src="javascripts/vendor/jquery-1.8.0.min.js"><\/script>')
+		= javascript_include_tag "vendor/jquery-ui-1.10.2.custom.min"
+		= javascript_include_tag "vendor/enquire.min"
+		= javascript_include_tag "vendor/jquery.scrollTo-1.4.3.1-min"
+		= javascript_include_tag "vendor/jquery.localscroll-1.2.7-min"
+		= javascript_include_tag "vendor/jquery.mousewheel"
+		= javascript_include_tag "vendor/zepto.min.js"
+		= javascript_include_tag "vendor/retina"
+		= javascript_include_tag "site"
+		
+		:javascript
+			var _gaq=[['_setAccount','UA-39403960-1'],['_trackPageview']];
+			(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+			g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+			s.parentNode.insertBefore(g,s)}(document,'script'));

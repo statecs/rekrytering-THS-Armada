@@ -1,0 +1,147 @@
+@import "compass";
+@import "compass/reset";
+@import "compass/css3/images";
+@import "compass/typography/vertical_rhythm";
+@import "susy";
+@import "_layout/grid";
+@import "_layout/baseline";
+@import "_layout/fonts";
+@import "_layout/type";
+@import "_layout/icons";
+
+body {
+	@include background(image-url("dots.png"), $color-dirtwhite);	
+}
+
+.nav-bg {
+	position:fixed;
+	width:100%;
+	height:100%;
+	background: rgba(0,0,0,0.6);
+	display:none;
+}
+
+p.leader {
+	text-align: center;
+}
+
+.nav-collapse-btn {
+	background: black;
+	display:none;
+	height:100%;
+	width:0;
+	float:right;
+
+	@include at-breakpoint($break-phone $total-columns $break-tablet-portrait) {
+		display:block;
+		width:$nav-collapse-btn-width;
+	}
+	@include at-breakpoint(0 $break-phone) {
+		display:none;
+	}
+
+}
+
+.nav-bar-phone {
+	display:none;
+	color: $color-dirtwhite;
+	background: black;
+	position:fixed;
+	top:0;
+	width:100%;
+	
+	.nav-bar-phone-inner {
+		height:$nav-phone-btn-height;
+		margin-left: $nav-phone-btn-width;	
+		line-height: $nav-phone-btn-height;
+		font-size: 1.5em;
+	}
+	
+	.nav-collapse-btn-phone {
+		height:$nav-phone-btn-height;
+		float: right;
+		color:$color-dirtwhite;
+		width: $nav-phone-btn-width;
+		text-align: center;
+	}
+
+	@include at-breakpoint(0 $break-phone) {
+		display:block;
+	}	
+}
+
+.nav {
+	background: $color-dirtwhite;
+	z-index:1000;
+
+	h4 {
+		margin-bottom:5px;
+	}
+
+	ul {
+		text-align:right;
+
+		li {
+			text-align:right;
+		}
+	}
+
+	.nav-wrapper {
+		overflow:auto;
+	}
+
+
+	#apply-link-wrapper {
+		background: $color-dirtwhite;
+		position:absolute;
+		bottom:0;
+		width:$nav-width;
+		height: 90px;
+
+		#apply-link {
+			background: $color-red;
+			color:$color-dirtwhite;
+			font-size: 2em;
+			display:block;
+			text-align:center;
+			text-transform:uppercase;
+			line-height: 58px;
+			margin:20px;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}	
+	}
+
+	@include at-breakpoint($break-phone $total-columns $break-tablet-portrait) {
+		width:$nav-width+$nav-collapse-btn-width;
+	}
+}
+
+
+.row {
+
+	.inner {
+		background: $color-dirtwhite;
+		padding:60px;
+		margin-bottom:120px;
+	}
+}
+
+#logo {
+	text-align:center;
+}
+
+#contact {
+	span {
+		display:block;
+	}
+}
+
+#om, #gruppledare {
+	@include at-breakpoint($break-phone $total-columns) {
+		margin-top: 670px;
+		margin-bottom: 900px;
+	}
+}

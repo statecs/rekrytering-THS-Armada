@@ -1,0 +1,104 @@
+$total-columns  : 12;
+$column-width   : 3.2em;
+$gutter-width   : 1em;
+$grid-padding   : $gutter-width;
+
+$break-tablet-portrait : 768px;
+$break-phone : 480px;
+
+$nav-width : 275px;
+$nav-collapse-btn-width : 70px;
+$nav-inner-padding : 20px;
+$nav-phone-btn-height:45px;
+$nav-phone-btn-width:45px;
+$body-margin-left : $nav-width;
+// $break          : 12;
+
+body {
+	margin-left:$body-margin-left;
+}
+
+.span5 {
+	@include span-columns(5, 10);
+	@include nth-omega(2n);
+	//@include at-breakpoint(0 $break-phone) {
+	//	@include span-columns(10, 10);
+	//}
+}
+
+.clear { clear:both }
+
+.main {
+  @include container($total-columns);
+  // @include susy-grid-background;
+}
+
+.nav {
+	width:$nav-width;
+	position:fixed;
+	height:100%;
+	top:0;
+	left:0;
+
+	.nav-wrapper {
+		height:100%;
+		overflow:scroll;
+		width:$nav-width;
+	}
+	
+	.nav-inner {
+		padding:$nav-inner-padding $nav-inner-padding 90px $nav-inner-padding;
+
+		//@include at-breakpoint(0 $break-phone) {
+		//	padding-top: 6px;
+		//}
+	}
+
+	//@include at-breakpoint(0 $break-phone) {
+	//	left:-$nav-width;
+	//}
+}
+
+.row {
+	padding-top: 40px;
+}
+
+#logo {
+	padding-top:60px;
+}
+
+//@include at-breakpoint(0 1024px) {
+//	.row {
+//		padding-top: 0;
+//	}
+//}
+
+//@include at-breakpoint($break-phone $total-columns $break-tablet-portrait) {
+//	body {
+//		margin-left: $nav-collapse-btn-width;
+//	}
+//
+//	.nav {
+//		left: -$nav-width;
+//	}
+//}
+
+//@include at-breakpoint(0 $break-phone) {
+//	body { 
+//		margin-left: 0; 
+//		margin-top: $nav-phone-btn-height;
+//	}
+//	.nav {
+//		// width:$nav-width - 20px;
+//	}
+//
+//	.nav-collapse-btn {
+//		width:20px;
+//	}
+//
+//	.row {
+//		.inner {
+//			padding:40px 30px !important;
+//		}		
+//	}
+//}

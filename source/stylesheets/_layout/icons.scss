@@ -1,0 +1,30 @@
+.icon-arrow-left, .icon-arrow-right, .icon-menu, .icon-close {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	color:white;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	font-size: 1.8em;
+	color: #333;
+
+	@include at-breakpoint(0 $break-phone) {
+		font-size: 1.3em;
+	}
+}
+.icon-arrow-left:before {
+	content: "\e000";
+}
+.icon-arrow-right:before {
+	content: "\e001";
+}
+.icon-menu:before {
+	content: "\e002";
+}
+.icon-close:before {
+	content: "\e003";
+}
