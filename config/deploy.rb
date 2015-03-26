@@ -22,7 +22,6 @@ end
 
 
 before "deploy:assets:precompile", "deploy:symlink_config_files" # must be here so it's done before precompile assets want's to do 'rake'
-after "deploy", "deploy:symlink_blog"
 after "deploy", "deploy:restart"
 after "deploy", "deploy:migrate"
 after "deploy", "deploy:cleanup"
