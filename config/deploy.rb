@@ -8,7 +8,7 @@ set :application, "rekrytering.armada.nu"
 set :deploy_to, "/var/www/rekrytering.armada.nu"
 set :repository, "git@github.com:armada-ths/rekrytering.git"
 set :ssh_options, { :forward_agent => true }
-set :deploy_via, :remote_cache
+set :deploy_via, :copy
 set :copy_compression, :gzip
 set :scm, :git
 set :user, 'deploy'
