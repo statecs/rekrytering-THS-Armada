@@ -21,8 +21,7 @@ ul {
 }
 
 h1 {
-	@include margin-leader(0.2);
-	@include adjust-font-size-to(110px, 6); // [size], [lines]	
+    @include adjust-font-size-to(55px, 2); @include margin-leader(0.2); // [size], [lines]
 	@include adjust-leading-to(0.8);
 }
 
@@ -32,7 +31,7 @@ h3 { @include adjust-font-size-to(64px, 3); @include margin-trailer(0.5); @inclu
 h4 { @include adjust-font-size-to(18px); }
 
 @include at-breakpoint(0 1024px) {
-	h1 { @include adjust-font-size-to(72px, 4); }
+	h1 { @include adjust-font-size-to(42px, 4); }
 	h2 { @include adjust-font-size-to(20px, 2); }
 }
 
