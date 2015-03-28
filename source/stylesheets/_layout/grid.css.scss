@@ -9,7 +9,7 @@ $break-tablet-portrait : 768px;
 $break-phone : 480px;
 
 $nav-width : 275px;
-$nav-collapse-btn-width : 0px;
+$nav-collapse-btn-width : 70px;
 $nav-inner-padding : 20px;
 $nav-phone-btn-height:45px;
 $nav-phone-btn-width:45px;
@@ -80,14 +80,11 @@ body {
 	body {
 		margin-left: $nav-collapse-btn-width;
 	}
-    .nav {
-      width:$nav-width - 20px;
-    }
 
-    .nav-collapse-btn {
-      width:20px;
-      color: $color-dg;
-    }
+  .nav {
+    left:-$nav-width;
+  }
+
 }
 
 @include at-breakpoint(0 $break-phone) {
@@ -100,7 +97,7 @@ body {
 		 width:$nav-width - 20px;
 	}
     .nav-inner{
-      padding:90px 30px !important;
+      padding:40px 30px !important;
     }
 
 	.nav-collapse-btn {
