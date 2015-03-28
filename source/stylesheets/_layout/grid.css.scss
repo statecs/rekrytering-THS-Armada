@@ -1,3 +1,5 @@
+$color-dg: #2f736c;
+
 $total-columns  : 12;
 $column-width   : 3.2em;
 $gutter-width   : 1em;
@@ -7,7 +9,7 @@ $break-tablet-portrait : 768px;
 $break-phone : 480px;
 
 $nav-width : 275px;
-$nav-collapse-btn-width : 70px;
+$nav-collapse-btn-width : 0px;
 $nav-inner-padding : 20px;
 $nav-phone-btn-height:45px;
 $nav-phone-btn-width:45px;
@@ -31,6 +33,7 @@ body {
 .main {
   @include container($total-columns);
   // @include susy-grid-background;
+
 }
 
 .nav {
@@ -49,14 +52,14 @@ body {
 	.nav-inner {
 		padding:$nav-inner-padding $nav-inner-padding 90px $nav-inner-padding;
 
-		//@include at-breakpoint(0 $break-phone) {
-		//	padding-top: 6px;
-		//}
+		@include at-breakpoint(0 $break-phone) {
+			padding-top: 6px;
+		}
 	}
 
-	//@include at-breakpoint(0 $break-phone) {
-	//	left:-$nav-width;
-	//}
+	@include at-breakpoint(0 $break-phone) {
+		left:-$nav-width;
+	}
 }
 
 .row {
@@ -67,38 +70,44 @@ body {
 	padding-top:60px;
 }
 
-//@include at-breakpoint(0 1024px) {
-//	.row {
-//		padding-top: 0;
-//	}
-//}
+@include at-breakpoint(0 1024px) {
+	.row {
+		padding-top: 0;
+	}
+}
 
-//@include at-breakpoint($break-phone $total-columns $break-tablet-portrait) {
-//	body {
-//		margin-left: $nav-collapse-btn-width;
-//	}
-//
-//	.nav {
-//		left: -$nav-width;
-//	}
-//}
+@include at-breakpoint($break-phone $total-columns $break-tablet-portrait) {
+	body {
+		margin-left: $nav-collapse-btn-width;
+	}
+    .nav {
+      width:$nav-width - 20px;
+    }
 
-//@include at-breakpoint(0 $break-phone) {
-//	body { 
-//		margin-left: 0; 
-//		margin-top: $nav-phone-btn-height;
-//	}
-//	.nav {
-//		// width:$nav-width - 20px;
-//	}
-//
-//	.nav-collapse-btn {
-//		width:20px;
-//	}
-//
-//	.row {
-//		.inner {
-//			padding:40px 30px !important;
-//		}		
-//	}
-//}
+    .nav-collapse-btn {
+      width:20px;
+      color: $color-dg;
+    }
+}
+
+@include at-breakpoint(0 $break-phone) {
+	body {
+		margin-left: 0;
+		margin-top: $nav-phone-btn-height;
+	}
+
+	.nav {
+		 width:$nav-width - 20px;
+	}
+
+	.nav-collapse-btn {
+		width:20px;
+      color: $color-dg;
+	}
+
+	.row {
+		.inner {
+			padding:40px 30px !important;
+		}
+	}
+}

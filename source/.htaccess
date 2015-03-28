@@ -337,6 +337,8 @@ FileETag None
 # RewriteBase /
 </IfModule>
 
+Redirect 301 /ansokan http://niwen.armada.nu/fairs/armada2015/recruitment_periods/42/applications/new
+
 
 # ----------------------------------------------------------------------
 # Suppress or force the "www." at the beginning of URLs

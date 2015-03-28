@@ -1,10 +1,13 @@
-$color-dirtwhite:#fff;
-$color-red: #ce271e;
+$color-red: #2f736c;
+$color-green:#e9f4ee;
+$color-dg: #2f736c;
+$color-lg: #f7fcf9;
+$color-bg: #ffffff;
 
-$font-jefferson:'ltc_jefferson_gothicregular';
-$font-didot:'Didot LT Std';
-$font-calluna:'Calluna';
-$font-calluna-sans:'Calluna Sans';
+$font-large:'BodoniFLF-Roman';
+$font-xlarge:'BodoniFLF-Bold';
+$font-calluna:'Roboto';
+$font-calluna-sans:'Roboto';
 
 body {
 	text-rendering: optimizelegibility;
@@ -12,9 +15,9 @@ body {
 }
 
 h1 {
-	font-family: $font-jefferson;
+	font-family: $font-large;
 	text-transform:uppercase;
-	color:$color-red;
+	color:$color-dg;
 	text-align: center;
 
 	@include at-breakpoint(0 $break-phone) {
@@ -31,20 +34,23 @@ h1 {
 }
 
 h2 {
-	font-family:$font-didot;
+	font-family:$font-xlarge;
 	text-transform:uppercase;
 	text-align:center;
+  color:$color-dg;
 }
 
 h3 {
-	font-family: $font-jefferson;
+	font-family: $font-large;
 	text-transform:uppercase;
 	text-align:center;
+  color:$color-dg;
 }
 
 h4 {
-	font-family:$font-didot;
+	font-family:$font-xlarge;
 	text-transform:uppercase;
+  color:$color-dg;
 }
 
 .row {
@@ -72,19 +78,20 @@ p, ul li {
 
 a {
 	text-decoration: none;
-	color:black;
+    color:$color-dg;
 	&:hover {
-		color:black;
+        color:$color-dg;
 		border-bottom: 1px solid #000;
 	}
 }
 
 #apply-link {
-	font-family: $font-jefferson;	
+	font-family: $font-large;
 }
 
 .nav-bar-phone {
-	font-family:$font-jefferson;
+	font-family:$font-large;
 	text-align:center;
 	text-transform:uppercase;
+  color:$color-dg;
 }
