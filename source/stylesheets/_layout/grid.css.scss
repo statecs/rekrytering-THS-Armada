@@ -99,6 +99,9 @@ body {
 	.nav {
 		 width:$nav-width - 20px;
 	}
+    .nav-inner{
+      padding:90px 30px !important;
+    }
 
 	.nav-collapse-btn {
 		width:20px;
@@ -107,7 +110,7 @@ body {
 
 	.row {
 		.inner {
-			padding:40px 90px !important;
+			padding:40px 30px !important;
 		}
 	}
 }
