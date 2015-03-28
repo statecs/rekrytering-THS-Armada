@@ -6,8 +6,9 @@ $color-bg: #ffffff;
 
 $font-large:'BodoniFLF-Roman';
 $font-xlarge:'BodoniFLF-Bold';
-$font-calluna:'Roboto';
-$font-calluna-sans:'Roboto';
+$font-special:'Roboto Condensed';
+$font-calluna:'Roboto Condensed';
+$font-calluna-sans:'Roboto Condensed';
 
 body {
 	text-rendering: optimizelegibility;
@@ -48,9 +49,9 @@ h3 {
 }
 
 h4 {
-	font-family:$font-xlarge;
+	font-family:$font-special;
 	text-transform:uppercase;
-  color:$color-dg;
+    color:$color-dg;
 }
 
 .row {
