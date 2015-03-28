@@ -74,21 +74,21 @@ $(function() {
 		nav_btn.css('line-height', $(window).height() + "px");
 		nav_btn_phone.css('line-height',nav_bar_phone_height - 2 + "px");
 
-		// var nav_wrapper = $('.nav-wrapper'),
-		// 	height = nav_wrapper.height(),
-		// 	scrollHeight = nav_wrapper.get(0).scrollHeight;
+		 var nav_wrapper = $('.nav-wrapper'),
+		 	height = nav_wrapper.height(),
+		 	scrollHeight = nav_wrapper.get(0).scrollHeight;
 
-		// var nav_wrapper = $('.nav-wrapper'),
-		// 	height = nav_wrapper.height(),
-		// 	scrollHeight = nav_wrapper.get(0).scrollHeight;
+		 var nav_wrapper = $('.nav-wrapper'),
+		 	height = nav_wrapper.height(),
+		 	scrollHeight = nav_wrapper.get(0).scrollHeight;
 
-		// TODO: stoppa scroll av sidan när menyn har scrollat i botten eller toppen. men "d" existerar inte på touchmove.
-		// nav_wrapper.bind('touchmove', function(e, d) {
-		// 	console.log(this.scrollTop, scrollHeight, height, e.type);
-		// 	if((this.scrollTop === (scrollHeight - height) && d < 0) || (this.scrollTop === 0 && d > 0)) {
-		// 		return false;
-		// 	}
-		// });
+		 //TODO: stoppa scroll av sidan när menyn har scrollat i botten eller toppen. men "d" existerar inte på touchmove.
+		 nav_wrapper.bind('touchmove', function(e, d) {
+		 	console.log(this.scrollTop, scrollHeight, height, e.type);
+		 	if((this.scrollTop === (scrollHeight - height) && d < 0) || (this.scrollTop === 0 && d > 0)) {
+		 		return false;
+		 	}
+		 });
 
 	});
 
