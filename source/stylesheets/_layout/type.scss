@@ -1,5 +1,5 @@
-$color-red: #2f736c;
-$color-green:#e9f4ee;
+$color-red: #ec665d;
+$color-green:#e8f5f1;
 $color-dg: #267b78;
 $color-lg: #e8f5f1;
 $color-bg: #ffffff;
@@ -77,6 +77,7 @@ p, ul li {
 	font-weight: 300;
 }
 
+
 a {
 	text-decoration: none;
     color:$color-dg;
@@ -85,7 +86,13 @@ a {
 		border-bottom: 1px solid #000;
 	}
 }
-
+.rep a{
+  color:$color-red;
+  &:hover {
+    color:$color-red;
+    border-bottom: 1px solid #000;
+  }
+}
 #apply-link {
 	font-family: $font-large;
 }
