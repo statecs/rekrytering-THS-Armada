@@ -27,6 +27,13 @@ body {
   vertical-align: baseline;
   background: url(../images/divider.png) no-repeat 10% 90%;
 }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .rep{
+    background: url(../images/divider@2x.png) no-repeat 10% 90%;
+  }
+}
+
 p.leader {
 	text-align: center;
 }
