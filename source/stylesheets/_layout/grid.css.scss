@@ -1,4 +1,4 @@
-$color-dg: #2f736c;
+$color-dg: #267b78;
 
 $total-columns  : 12;
 $column-width   : 3.2em;
@@ -92,7 +92,9 @@ body {
 		margin-left: 0;
 		margin-top: $nav-phone-btn-height;
 	}
-
+    .rep{
+      background: url(../../images/divider.png) no-repeat 100% 100% !important;
+    }
 	.nav {
 		 width:$nav-width - 20px;
 	}

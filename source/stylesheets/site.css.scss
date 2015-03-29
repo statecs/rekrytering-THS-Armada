@@ -20,7 +20,13 @@ body {
 	background: rgba(0,0,0,0.6);
 	display:none;
 }
-
+.rep{
+  margin: 0 auto;
+  width: 100%;
+  display: inline-block;
+  vertical-align: baseline;
+  background: url(../images/divider.png) no-repeat 10% 90%;
+}
 p.leader {
 	text-align: center;
 }
