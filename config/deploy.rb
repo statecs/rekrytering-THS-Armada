@@ -4,8 +4,8 @@ set :stages, %w(production staging)
 set :default_stage, "staging"
 require 'capistrano/ext/multistage' # yes, must be after variables above
 
-set :application, "rekrytering.armada.nu"
-set :deploy_to, "/var/www/rekrytering.armada.nu"
+set :application, "recruitment.armada.nu"
+set :deploy_to, "/var/www/recruitment.armada.nu"
 set :repository, "build"
 set :ssh_options, { :forward_agent => true }
 set :deploy_via, :copy
