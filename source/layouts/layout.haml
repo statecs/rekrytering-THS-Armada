@@ -9,16 +9,16 @@
 		
 		-# To set titles and descriptions globally and for each individual page, see /DOCS.md
 		%title= page_title
-		%meta{:content => "Är du THS Armadas nästa talang? Sök till gruppledare, utvecklare eller formgivare senast den 21:e april!", :name => "description"}
+		%meta{:content => "Join THS Armada - the largest student-driven project at KTH! Application closes at midnight the 15th of September (but we strongly recommend you to apply right away).", :name => "description"}
 		%meta{:content => "width=device-width, initial-scale=1.0, maximum-scale=1.0", :name => "viewport"}
-		%meta{:content => "Ansökan till THS Armada har öppnat! | Armada.nu", :property => "og:title"}/
+		%meta{:content => "Recruitment | Armada.nu", :property => "og:title"}/
 		%meta{:content => 'images/logo.png', :property => "og:image"}/
-		%meta{:content => "Är du THS Armadas nästa talang? Sök till Armada senast den 21:e april!", :property => "og:description"}/
+		%meta{:content => "Join THS Armada - the largest student-driven project at KTH! Application closes at midnight the 15th of September (but we strongly recommend you to apply right away).", :property => "og:description"}/
 
 		-#Favicon Options:
 		-#Update favicon_base.png in /source and middleman-favicon-maker will generate all the versions you need on 'middleman build'
 		-#OR, place favicon.ico and apple-touch-icon.png in /source and deactivate :favicon_maker in config.rb
-		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,500' rel='stylesheet' type='text/css'>
 
 		= stylesheet_link_tag "site"
 		= javascript_include_tag "vendor/modernizr-2.6.1.min"
@@ -34,38 +34,25 @@
 			.nav-wrapper
 				.nav-inner
 					%h4= link_to 'Start', '#top'
-					%h4= link_to 'Vad är THS Armada', '#om'
-					%h4= link_to 'Vad innebär det att vara en del av THS Armada', '#thsarmda'
-					%h4= link_to 'Marknadsföring, Kommunikation och System', '#media-kommunikation-system'
+					%h4= link_to 'About THS Armada', '#about'
+					%h4= link_to 'Join THS Armada', '#thsarmda'
+					%h4= link_to 'Marketing, Communications and Internal Systems', '#mks'
 					%ul
-						%li= link_to 'Applikationsutvecklare (4 st)', '#app-utv'
-						%li= link_to 'Backend-utvecklare (1 st)', '#back-end'
-						%li= link_to 'Frontend-utvecklare (1 st)', '#front-end'
-						%li= link_to 'Systemutvecklare (4 st)', '#system'
-						%li= link_to 'Kampanjkoordinator (2 st)', '#kampanj-koordinator'
-						%li= link_to 'Fotogruppledare (1 st)', '#foto-gl'
-						%li= link_to 'Kampanj: Filmskapare (1 st)', '#kampanj-filmskapare'
-						%li= link_to 'Grafisk formgivare (2 st)', '#grafisk-formgivare'
+						%li= link_to 'Photographer (4)', '#photo-hosts'
 
-					%h4= link_to 'Näringsliv och Event', '#naringsliv-event'
+					%h4= link_to 'Business Relations and Events', '#ne'
 					%ul
-						%li= link_to 'Bankett: Logistikgruppledare (1 st)', '#log-bankett'
-						%li= link_to 'Bankett: Inrednings- och Inköpsgruppledare (1 st)', '#inredning-bankett'
-						%li= link_to 'Bankett: Eventteknikkoordinator (1 st)', '#event-bankett'
-						%li= link_to 'Bankett: Underhållningsgruppledare (1 st)', '#underhallning-bankett'
-						%li= link_to 'Bankett: Filmgruppledare (1 st)', '#filmgl-bankett'
-						%li= link_to 'Eventgruppledare (5 st)', '#event'
-						%li= link_to 'Sponskoordinator (2 st)', '#spons'
-						%li= link_to 'Loungegruppledare (2 st)', '#lounge'
-						%li= link_to 'Servicegruppledare (2 st)', '#service'
+						%li= link_to 'Event Host (12)', '#event-host'
+						%li= link_to 'Service Host (16)', '#service-host'
+						%li= link_to 'Lounge Host (12)', '#lounge-host'
+						%li= link_to 'Banquet Host (9)', '#banquet-host'
+						%li= link_to 'Banquet Host: Entertainment (2)', '#banquet-host-ent'
 
-					%h4= link_to 'Logistik och Mässa', '#logistik-massa'
+					%h4= link_to 'Logistics and Career Fair', '#lm'
 					%ul
-						%li= link_to 'Mässgruppledare (15 st)', '#mass-gl'
-						%li= link_to 'Specialstyrkan: Logistikgruppledare (1 st)', '#spec-log'
-						%li= link_to 'Specialstyrkan: Teknikgruppledare (1 st)', '#spec-tek'
-						%li= link_to 'Representationsgruppledare (1 st)', '#rep-gl'
-						%li= link_to 'Representationssittningsgruppledare (1 st)', '#representationssittning'
+						%li= link_to 'Career Fair Host (159)', '#fair-host'
+						%li= link_to 'University Relations Host (8+2)', '#uni-host'
+						%li= link_to 'Task force (10+10)', '#task-force'
 		.nav-bg
 
 		%div{:role => "main", :class => "main"}= yield
