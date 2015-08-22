@@ -45,15 +45,6 @@ $(function() {
 		};
 	}
 
-	var preventScrollPhone = function(e) {
-		if(nav_open == true) {
-			// console.log(e.target);
-			if(!$('.nav').has($(e.target)).length) { // stoppa touch scroll om det vi touchar (e.target) inte är en child till .nav
-				return false;
-			}
-		}
-	}
-
 	/* MEDIA QUERIES */
 	enquire.listen();
 	enquire.register('(min-width:769px)', function() {
@@ -65,10 +56,10 @@ $(function() {
 	});
 	enquire.register('(max-width:768px)', function() {
 		on_phone = true;
-		if (nav_open) { 
+		if (nav_open) {
 			navClose();
 		};
-			
+
 		nav_btn.height($(window).height());
 		nav_item.bind('click.itemclose', navClose);
 		nav_btn.css('line-height', $(window).height() + "px");
@@ -119,6 +110,6 @@ $(function() {
 	nav_btn.bind('touchstart', navOpenOrClose);
 	nav_btn_phone.bind('touchstart', navOpenOrClose);
 	nav_bg.bind('touchstart', navClose);
-	$('body').bind('touchmove.phone', preventScrollPhone);
+
 
 })

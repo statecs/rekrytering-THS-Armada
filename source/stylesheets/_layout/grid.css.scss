@@ -48,7 +48,7 @@ body {
 		overflow:scroll;
 		width:$nav-width;
 	}
-	
+
 	.nav-inner {
 		padding:$nav-inner-padding $nav-inner-padding 90px $nav-inner-padding;
 
@@ -86,6 +86,34 @@ body {
   }
 
 }
+@include at-breakpoint(0 $break-tablet-portrait) {
+  body {
+    margin-left: 0;
+    margin-top: $nav-phone-btn-height;
+  }
+  .rep{
+    background: url(../../images/divider.png) no-repeat 100% 100% !important;
+  }
+  .nav {
+    width:$nav-width - 20px;
+  }
+  .nav-inner{
+    padding:40px 30px !important;
+  }
+
+  .nav-collapse-btn {
+    width:20px;
+    color: $color-dg;
+  }
+
+  .row {
+    .inner {
+      padding:20px 20px !important;
+    }
+  }
+}
+
+
 
 @include at-breakpoint(0 $break-phone) {
 	body {
